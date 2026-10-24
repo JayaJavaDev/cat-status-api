@@ -1,0 +1,257 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #b6ada4;
+    color: #302941;
+    line-height: 1.6;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #898397;
+    border-bottom: 1px solid #f1e7df;
+}
+
+.logo {
+    color: #302941;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.header span {
+    color: #21084b;
+    font-size: 0.9rem;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.hero {
+    padding: 60px 0 35px;
+    text-align: center;
+}
+
+.tag {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 30px;
+    background: #ffeddf;
+    color: #e66f32;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.hero h1 {
+    margin: 20px 0 10px;
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    color: #f48145;
+}
+
+.subtitle {
+    color: #777181;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    max-width: 550px;
+    margin: 25px auto 18px;
+    padding: 8px;
+    background: white;
+    border: 1px solid #eee2d9;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px #3029410b;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+.search-box button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 9px;
+    background: #f48145;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background: #dc6b30;
+}
+
+.quick-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.quick-buttons button {
+    padding: 8px 13px;
+    border: 1px solid #eee2d9;
+    border-radius: 25px;
+    background: white;
+    color: #625b6d;
+    cursor: pointer;
+}
+
+.quick-buttons button:hover {
+    border-color: #f48145;
+    color: #dc6b30;
+}
+
+.result {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 35px;
+    margin: 25px 0 65px;
+    padding: 28px;
+    background: white;
+    border: 1px solid #f1e7df;
+    border-radius: 22px;
+    box-shadow: 0 12px 35px #3029410a;
+}
+
+.image-container {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 250px;
+    border-radius: 16px;
+    background: #fff0e6;
+}
+
+.image-container img {
+    display: block;
+    width: 100%;
+    max-height: 350px;
+    object-fit: contain;
+}
+
+.small-title {
+    color: #c7551c;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.details h2 {
+    margin: 12px 0;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+}
+
+.details > p:not(.small-title) {
+    color: #777181;
+}
+
+.details .api-info {
+    margin-top: 20px;
+    font-size: 0.85rem;
+}
+
+.about {
+    padding-bottom: 65px;
+    text-align: center;
+}
+
+.about > h2 {
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    text-align: left;
+}
+
+.card {
+    padding: 20px;
+    border: 1px solid #f1e7df;
+    border-radius: 15px;
+    background: white;
+}
+
+.card span {
+    font-size: 1.6rem;
+}
+
+.card h3 {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.card p {
+    color: #777181;
+    font-size: 0.9rem;
+}
+
+footer {
+    padding: 22px;
+    background: white;
+    border-top: 1px solid #f1e7df;
+    color: #777181;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 760px) {
+    .result {
+        grid-template-columns: 1fr;
+        padding: 18px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero {
+        padding-top: 40px;
+    }
+}
+
+@media (max-width: 450px) {
+    .header {
+        padding: 16px 5%;
+    }
+
+    .header span {
+        font-size: 0.72rem;
+    }
+
+    .search-box button {
+        padding: 10px;
+        font-size: 0.85rem;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
